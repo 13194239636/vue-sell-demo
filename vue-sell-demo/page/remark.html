@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width user-scalable=no" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../src/assets/cleardefault.css">
+	<meta charset="UTF-8">
+	<title>remark</title>
+</head>
+<style type="text/css">
+#remark{
+	width:100%;
+	height:16rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.score{
+	width:100%;
+	padding-top:0.72rem;
+}
+.score::after{
+	display: block;
+	content: "";
+	width:100%;
+	height:0.72rem;
+	background: rgba(147,153,159,0.2);
+}
+.score .score_num{
+	display: inline-block;
+	float: left;
+	width:5.5rem;
+	border-right:1px solid rgba(147,153,159,0.4);
+}
+
+.score .score_num .score_num1{
+	font-size: 0.96rem;
+	line-height: 1.12rem;
+	color:rgb(255,153,0);
+	margin-bottom:0.24rem;
+	text-align: center;
+}
+.score .score_num .score_num2{
+	font-size: 0.48rem;
+	line-height: 0.48rem
+	color:rgb(7,17,27);
+	margin-bottom: 0.32rem;
+	text-align: center;
+}
+.score .score_num .score_num3{
+	font-size: 0.4rem;
+	line-height: 0.4rem;
+	color: rgb(147,153,159);
+	margin-bottom:0.24rem;
+	text-align: center;
+}
+.score_star{
+	padding-left:6.46rem;
+	padding-right:0.96rem;
+	padding-bottom:0.4rem;
+}
+.score_star ul li,.score_star .delivery_time{
+	font-size: 0.48rem;
+	line-height: 0.72rem;
+	color:rgb(7,17,27);
+	margin-bottom: 0.32rem;
+}
+.score_star ul li .score_star_name,.score_star .delivery_time .delivery_time_name{
+	margin-right:0.48rem;
+}
+.score_star ul li .score_star_score{
+	font-size: 0.48rem;
+	line-height:0.72rem;
+	color:rgb(255,153,0);
+}
+.score_star .delivery_time span{
+	font-size: 0.48rem;
+	line-height: 0.72rem;
+	color:rgb(7,17,27);
+	margin-bottom: 0.32rem;
+}
+.score_star .delivery_time .delivery_time_detail{
+	font-size: 0.48rem;
+	line-height: 0.72rem;
+	color:rgb(147,153,159);
+}
+.remark{
+	width:100%;
+}
+.remark .remark_num{
+	padding:0.72rem 0rem;
+	margin:0rem 0.72rem;
+	border-bottom:0.04rem solid rgba(147,153,159,0.4);
+
+}
+.remark .remark_num ul{
+	width:100%;
+	height:100%;
+}
+.remark .remark_num li{
+	display: inline-block;
+	padding: 0.32rem;
+	margin-right:0.32rem;
+	font-size: 0.48rem;
+	text-align: center;
+}
+.remark .remark_num li span{
+	display: inline-block;
+	padding-left:0.1rem;
+	transform:scaleX(0.7) scaleY(0.7);
+	-webkit-transform:scaleX(0.7) scaleY(0.7);
+	position: relative;
+	top:0.05rem;
+}
+.remark .remark_num li:nth-child(1){
+	background: #00a0dc;
+	color:#f9fdff;
+}
+.remark .remark_num li:nth-child(2){
+	background: #ccecf7;
+	color:#4c535d;
+}
+.remark .remark_num li:nth-child(3){
+	background: #eaebed;
+	color:#465059;
+}
+.remark .remark_select{
+	padding:0.72rem;
+	font-size: 0.48rem;
+	color:rgb(147,153,159);
+	line-height: 0.48rem;
+	display: flex;
+	align-items: center;
+	border-bottom:0.04rem solid rgba(147,153,159,0.4);
+}
+.remark .remark_select img{
+	display: inline-block;
+	width:1rem;
+	height:1rem;
+	padding-right:0.2rem;
+}
+.remark .remark_detail li{
+	padding:0.72rem;
+	border-bottom:0.04rem solid rgba(147,153,159,0.4);
+}
+.remark .remark_detail li img{
+	float: left;
+	display: inline-block;
+	width:1.12rem;
+	height:1.12rem;
+	border-radius:50%;
+}
+.remark .remark_detail li  .remark_content {
+	padding-left:1.6rem;
+}
+.remark .remark_detail li  .remark_content .remarker_name{
+	font-size:0.4rem;
+	line-height: 0.48rem;
+	color:rgb(7,17,27);
+	margin-bottom:0.16rem;
+}
+.remark .remark_detail li  .remark_content .remarker_name .time{
+	float: right;
+	font-size:0.4rem;
+	line-height: 0.48rem;
+	color:rgb(147,153,159);
+	font-weight: 200;
+}
+.remark .remark_detail li  .remark_content .remark_star span{
+	display: inline-block;
+	font-size:0.4rem;
+	line-height: 0.48rem;
+	color:rgb(147,153,159);
+	font-weight: 200;
+	margin-left:0.2rem;
+	margin-bottom:0.24rem;
+}
+.remark .remark_detail li  .remark_content .remark_main{
+	font-size: 0.48rem;
+	line-height: 0.72rem;
+	margin-bottom:0.32rem;
+	word-break: break-all;
+}
+.remark .remark_detail li  .remark_content .remark_remarks img{
+	float:left;
+	width:0.64rem;
+	height:0.64rem;
+	padding-right:0.32rem;
+	position: relative;
+	top:0.06rem;
+}
+
+.remark .remark_detail li  .remark_content .span_group{
+	display: flex;
+	align-items: center;
+}
+.remark .remark_detail li  .remark_content .span_group span{
+	width:3rem;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size:0.36rem;
+	line-height: 0.72rem;
+	color:rgb(147,153,159);
+	padding:0rem 0.24rem;
+	margin-right:0.32rem;
+	border:0.04rem solid rgba(7,17,27,0.1);
+	border-radius: 0.08rem;
+}
+</style>
+<body>
+	<div id="remark">
+		<div class="score">
+			<div class="score_num">
+				<p class="score_num1">3.9</p>
+				<p class="score_num2">综合评分</p>
+				<p class="score_num3">高于周边商家69.2%</p>
+			</div>
+			<div class="score_star">
+				<ul>
+					<li><span class="score_star_name">服务态度</span><span class="score_star_score">4.0</span></li>
+					<li><span class="score_star_name">服务态度</span><span class="score_star_score">4.0</span></li>
+				</ul>
+				<p class="delivery_time"><span class="delivery_time_name">送达时间</span><span class="delivery_time_detail">40分钟</span></p>
+			</div>
+		</div>
+		<div class="remark">
+			<div class="remark_num">
+				<ul>
+					<li>全部<span>50</span></li>
+					<li>满意<span>44</span></li>
+					<li>不满意<span>6</span></li>
+				</ul>
+			</div>
+			<div class="remark_select">
+				<img src="../src/resource/SVG/check_circle_blue.svg">
+				只看有内容的评价
+			</div>
+			<ul class="remark_detail">
+				<li>
+					<img src="">
+					<div class="remark_content">
+						<p class="remarker_name">
+							聚美咋hi家
+							<span class="time">2012-21-32 10:12:12</span>
+						</p>
+						<p class="remark_star"><span>80分钟送达</span></p>
+						<p class="remark_main">11111111111111111111111111111111111111111111</p>
+						<p class="remark_remarks">
+							<img src="../src/resource/SVG/thumb_up.svg">
+							<p class="span_group">
+								<span>打我先顾水电站</span>
+								<span>打我先顾水电站</span>
+							</p>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var oHTML = document.html||document.documentElement;
+		console.log(oHTML);
+		var oFontSize = oHTML.getBoundingClientRect().width/15;
+		oHTML.style.fontSize = oFontSize+"px";
+	</script>
+</body>
+</html>

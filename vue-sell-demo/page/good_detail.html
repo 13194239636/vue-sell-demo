@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width user-scalable=no" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../src/assets/cleardefault.css">
+	<meta charset="UTF-8">
+	<title>goods_detail</title>
+</head>
+<style type="text/css">
+#goods_detail{
+	width:100%;
+}
+.title{
+	width:100%;
+	border-bottom:0.64rem solid #f3f5f7;
+}
+.title img{
+	width:100%;
+	height:15.0rem;
+}
+.title .good_price{
+	padding:0.72rem;
+}
+.title .good_price .title_name{
+	font-size:0.56rem;
+	font-weight: 700;
+	color:rgb(7,17,27);
+	line-height: 0.56rem;
+	margin-bottom: 0.32rem
+}
+.title .good_price .good_sellnum{
+	font-size:0.4rem;
+	line-height: 0.4rem;
+	color:rgb(147,153,159);
+	margin-bottom: 0.72rem;
+}
+.title .good_price .good_sellnum span{
+	margin-right: 0.48rem;
+	margin-bottom: 0.72rem;
+}
+.title .good_price .price_detail_addcar{
+	font-size: 0.4rem;
+	color:rgb(240,20,20);
+	font-weight: normal;
+	line-height: 0.96rem;
+}
+.title .good_price .price_detail_addcar .currentPrice{
+	font-size:0.56rem;
+	font-weight: 700;
+	margin-right:0.1rem;
+}
+.title .good_price .price_detail_addcar .oldPrice{
+	color:rgb(147,153,157);
+}
+.title .good_price .price_detail_addcar  .addCar{
+	float: right;
+	padding:0.24rem 0.48rem;
+	width:2.96rem
+	line-height:0.48rem;
+	color:white;
+	font-size: 0.4rem;
+	text-align: center;
+	border-radius: 0.96rem;
+	background:rgb(0,160,220);
+	position: relative;
+	top:-0.24rem;
+}
+.introudce{
+	padding:0.72rem;
+	border-bottom:0.64rem solid #f3f5f7;
+}
+.name{
+	text-align: left;
+	font-size: 0.56rem;
+	line-height: 0.56rem;
+	color:rgb(7,17,27);
+	margin-bottom: 0.24rem;
+}
+.introudce .content{
+	padding:0.32rem;
+	font-size: 0.48rem;
+	line-height: 0.96rem;
+	font-weight: 200;
+	color:rgb(77,85,93);
+	word-break: break-all;
+}
+.remark{
+	width:100%;
+}
+.remark .remark_num{
+	padding:0.72rem 0rem;
+	margin:0rem 0.72rem;
+	border-bottom:0.04rem solid rgba(147,153,159,0.4);
+
+}
+.remark .remark_num ul{
+	width:100%;
+	height:100%;
+}
+.remark .remark_num li{
+	display: inline-block;
+	padding: 0.32rem;
+	margin-right:0.32rem;
+	font-size: 0.48rem;
+	text-align: center;
+}
+.remark .remark_num li span{
+	display: inline-block;
+	padding-left:0.1rem;
+	transform:scaleX(0.7) scaleY(0.7);
+	-webkit-transform:scaleX(0.7) scaleY(0.7);
+	position: relative;
+	top:0.05rem;
+}
+.remark .remark_num li:nth-child(1){
+	background: #00a0dc;
+	color:#f9fdff;
+}
+.remark .remark_num li:nth-child(2){
+	background: #ccecf7;
+	color:#4c535d;
+}
+.remark .remark_num li:nth-child(3){
+	background: #eaebed;
+	color:#465059;
+}
+.remark .remark_select{
+	padding:0.72rem;
+	font-size: 0.48rem;
+	color:rgb(147,153,159);
+	line-height: 0.48rem;
+	display: flex;
+	align-items: center;
+	border-bottom:0.04rem solid rgba(147,153,159,0.4);
+}
+.remark .remark_select img{
+	display: inline-block;
+	width:1rem;
+	height:1rem;
+	padding-right:0.2rem;
+}
+.remark .remark_detail {
+	padding:0rem 0.72rem;
+}
+.remark .remark_detail li{
+	padding:0.64rem 0rem;
+	border-bottom: 0.04rem solid rgba(7,17,27,0.1)
+}
+.remark .remark_detail li .name_time{
+	font-size: 0.4rem;
+	line-height: 0.48rem;
+	color:rgb(147,153,159);
+	margin-bottom: 0.24rem;
+}
+.remark .remark_detail li .name_time .name{
+	float: right;
+}
+.remark .remark_detail li .name_time .name img{
+	width:0.48rem;
+	height:0.48rem;
+	margin-left:0.24rem;
+	border-radius: 50%;
+}
+.remark .remark_detail li .remark_content{
+	display:flex;
+	align-items: center;
+	font-size: 0.48rem;
+	line-height: 0.64rem;
+	color:rgb(7,17,27);
+}
+.remark .remark_detail li .remark_content img{
+	width:0.48rem;
+	height:0.48rem;
+	padding-right:0.16rem;
+	float: left;
+}
+</style>
+<body>
+	<div id="goods_detail">
+		<div class="title">
+			<img src="">
+			<div class="good_price">
+				<p class="title_name">皮蛋收容周</p>
+				<p class="good_sellnum">月售<span>1100份</span>好评率100%</p>
+				<p class="price_detail_addcar">
+					￥
+					<span class="currentPrice">40</span>
+					<span class="oldPrice">￥28</span>
+					<span class="addCar">加入购物车</span>
+				</p>
+			</div>
+		</div>
+		<div class="introudce">
+			<p class="name">商品介绍</p>
+			<p class="content">111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+		</div>
+		<div class="remark">
+			<div class="remark_num">
+				<ul>
+					<li>全部<span>50</span></li>
+					<li>推荐<span>44</span></li>
+					<li>吐槽<span>6</span></li>
+				</ul>
+			</div>
+			<div class="remark_select">
+				<img src="../src/resource/SVG/check_circle_blue.svg">
+				只看有内容的评价
+			</div>
+
+			<ul class="remark_detail">
+				<li>
+					<p class="name_time">
+						<span class="name">
+							1213132321
+							<img src="">
+						</span>
+						<span class="time">12321321321</span>
+					</p>
+					<p class="remark_content">
+						<img src="../src/resource/SVG/thumb_down.svg">
+						1111111111111111111111111111111111111
+					</p>
+				</li>
+				<li>
+					<p class="name_time">
+						<span class="name">
+							1213132321
+							<img src="">
+						</span>
+						<span class="time">12321321321</span>
+					</p>
+					<p class="remark_content">
+						<img src="../src/resource/SVG/thumb_down.svg">
+						1111111111111111111111111111111111111
+					</p>
+				</li>
+				<li>
+					<p class="name_time">
+						<span class="name">
+							1213132321
+							<img src="">
+						</span>
+						<span class="time">12321321321</span>
+					</p>
+					<p class="remark_content">
+						<img src="../src/resource/SVG/thumb_down.svg">
+						1111111111111111111111111111111111111
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var oHTML = document.html||document.documentElement;
+		console.log(oHTML);
+		var oFontSize = oHTML.getBoundingClientRect().width/15;
+		oHTML.style.fontSize = oFontSize+"px";
+	</script>
+</body>
+</html>

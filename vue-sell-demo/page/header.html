@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width user-scalable=no" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../src/assets/cleardefault.css">
+	<meta charset="UTF-8">
+	<title>header</title>
+</head>
+<style type="text/css">
+	#header{
+		width:100%;
+		background: rgba(7,17,27,0.2);
+		overflow: hidden;
+	}
+	.header-notice{
+		width:100%;
+	    height: 1.12rem;
+	    padding: 0.6rem 0rem;
+		background: rgba(7,17,27,0.2);
+	}
+	.header-notice .header-notice-icon{
+		width:1.76rem;
+		height:0.96rem;
+		margin:0.0rem 0.0rem 0.0rem 0.6rem;
+		position: relative;
+		top:-0.08rem;
+	}
+	.header-notice .header-notice-content{
+		display: inline-block;
+		height: 1.12rem;
+		line-height: 1.12rem;
+		font-size: 0.7rem;
+		width:10.9rem;
+		font-weight:200;
+		color:rgb(255,255,255);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.header-notice .header-notice-arrow{
+		display: inline-block;
+		width:0.5rem;
+		height:0.5rem;
+		margin:0.0rem 0.6rem 0.0rem 0rem;
+		transform: rotateY(180deg) translateY(-0.2rem);
+		-webkit-transform: rotateY(180deg) translateY(-0.2rem);
+	}
+	.header-title{
+		position: relative;
+		padding:0.96rem 0.6rem 0.6rem 0.96rem;
+	}
+	.header-title .header-title-pic{
+		float: left;
+		width:4rem;
+		height:4rem;
+		border-radius: 0.16rem;
+		padding-right:0.4rem;
+	}
+	.header-title .header-title-main{
+		padding-bottom: 0.16rem ;
+		padding-left: 4.05rem;
+		height:5.12rem;
+	}
+	.header-title .header-title-main .main-title {
+		font-size: 0.8rem;
+		line-height: 1rem;
+		color:rgb(255,255,255);
+		font-weight: bold;
+	}
+	.header-title .header-title-main .main-title img{
+		position: relative;
+		top:0.14rem;
+		width:1.6rem;
+		height: 0.96rem;
+	}
+	.header-title .header-title-main .main-text1{
+		width:100%;
+		line-height: 0.7rem;
+		font-size: 0.7rem;
+		font-weight: 8.0rem;
+		color:white;
+		margin-top:0.6rem;
+	}
+	.header-title .header-title-main .main-text2{
+		width:100%;
+		height: 1.2rem;
+		line-height:1.2rem;
+		font-size: 0.6rem;
+		color:white;
+		margin-top:0.5rem;
+	}
+	.header-title .header-title-main .main-text2 img{
+		width:0.96rem;
+		height:0.96rem;
+		position: relative;
+		top:0.15rem;
+	}
+	.header-title .header-title-main .num{
+		display: inline-block;
+		position: absolute;
+		right:0.6rem;
+		bottom:0.5rem;
+		font-size: 0.8rem;
+		color:rgb(255,255,255);
+		width:2.2rem;
+		height: 1.2rem;
+		line-height: 1.2rem;
+		background: rgba(7,17,27,0.2);
+		border-radius: 0.6rem;
+		padding-left:0.4rem; 
+		font-weight: normal;
+	}
+	.header-title .header-title-main .num img{
+		position: relative;
+		top:-0.08rem;
+		display: inline-block;
+		width:0.4rem;
+		height:0.4rem;
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+	}
+	#header .notice_and_discount_msg1{
+		position:fixed;
+		top:0rem;
+		left:0rem;
+		width:100%;
+		height:100%;
+		filter: blur(0.2rem);
+		background: rgba(7,17,27,0.8);
+	}
+	#header .notice_and_discount_msg2{
+		position:fixed;
+		top:0rem;
+		left:0rem;
+		width:100%;
+		height:100%;
+		text-align: center;
+	}
+	#header .notice_and_discount_msg2 .nadm_title{
+		margin-top:2.56rem;
+		margin-bottom:1.12rem;
+		font-size: 0.64rem;
+		font-weight: 700;
+		line-height: 0.64rem;
+		color:rgb(255,255,255);
+	}
+	#header .notice_and_discount_msg2 .title_line{
+		margin:0rem 1.44rem 0rem 1.44rem;
+		font-size: 0.55rem;
+		font-weight: 700;
+		height: 0.64rem;
+		line-height: 0.64rem;
+		color:rgb(255,255,255);
+		display: flex;
+		justify-content: space-around;
+	}
+	.title_line .line1{
+		margin-right:0.48rem;
+		margin-top:0.32rem; 
+		width:4.48rem;
+		height:0.04rem;
+		background: rgba(255,255,255,0.2);
+	}
+	.title_line .line2{
+		margin-left:0.48rem;
+		margin-top:0.32rem; 
+		width:4.48rem;
+		height:0.04rem;
+		background: rgba(255,255,255,0.2);
+	}
+	.discount_msg{
+		margin:0rem 1.44rem 0rem 1.44rem;
+		padding:0.96rem 0.48rem 1.12rem 0.48rem;
+		list-style: none;
+	}
+	.discount_msg li{
+		height:1.28rem;
+		line-height:1.32rem;
+		margin-bottom:0.48rem;
+		padding-left:1.44rem;
+		background:url(../src/resource/img/decrease_1@2x.png) no-repeat 0rem 0.14rem;
+		font-size: 0.48rem;
+		font-weight: 200;
+		color:rgb(255,255,255);
+		text-align: left;
+	}
+	.notice_msg{
+		margin:0rem 1.92rem 2.6rem 1.92rem;
+		padding-top:0.96rem;
+		font-size: 0.9rem;
+		font-weight: 200;
+		line-height:1.8rem;
+		color: rgb(255,255,255);
+		text-align: left;
+		word-break: break-all;
+	}
+	.close{
+		width:2rem;
+		height:2rem;
+		font-size: 2.56rem;
+		background: rgba(255,255,255,0.5);
+		border-radius: 50%;
+		
+	}
+</style>
+<body>
+	<div id="header">
+		<div class="header-title">
+			<img class="header-title-pic" src="">
+			<div class="header-title-main">
+				<p class="main-title">
+					<img src="../src/resource/img/brand@2x.png">
+					粥品香坊(大运村)
+				</p>
+				<p class="main-text1">
+					蜂鸟专送
+				</p>
+				<p class="main-text2">
+					<img src="../src/resource/img/decrease_1@2x.png">
+					在线支付满28减5
+				</p>
+				<a class="num" href="#">
+					5个
+					<img class="header-notice-arrow" src="../src/resource/SVG/arrow_lift.svg">
+				</a>
+			</div>
+		</div>		
+		<div class="header-notice">
+			<img class="header-notice-icon" src="../src/resource/img/bulletin@2x.png">
+			<span class="header-notice-content">
+				粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。
+			</span>
+			<img class="header-notice-arrow" src="../src/resource/SVG/arrow_lift.svg">
+		</div>
+		<div id="detail-msg">
+			<div class="notice_and_discount_msg1"></div>	
+			<div class="notice_and_discount_msg2">
+				<div class="nadm_title">
+					<p>粥品香坊(大运村)</p>
+					<p></p>
+				</div>
+				<div class="title_line">
+					<p class="line1"></p>
+					<p class="text">优惠信息</p>
+					<p class="line2"></p>
+				</div>
+				<ul class="discount_msg">
+					<li>在线支付满28减5，满50减10</li>
+				</ul>
+				<div class="title_line">
+					<p class="line1"></p>
+					<p class="text">商家公告</p>
+					<p class="line2"></p>
+				</div>
+				<p class="notice_msg">
+					1111111111111111111111111111111111111111111111111111111
+				</p>
+				<img class="close" src="../src/resource/SVG/close.svg">
+			</div>	
+		</div>
+	</div>
+	<script type="text/javascript">
+		var oHTML = document.html||document.documentElement;
+		console.log(oHTML);
+		var oFontSize = oHTML.getBoundingClientRect().width/15;
+		oHTML.style.fontSize = oFontSize+"px";
+	</script>
+</body>
+</html>

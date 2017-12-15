@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width user-scalable=no" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../src/assets/cleardefault.css">
+	<meta charset="UTF-8">
+	<title>footer</title>
+</head>
+<style type="text/css">
+	#footer{
+		position:fixed;
+		bottom:0.0rem;
+		left:0.0rem;
+		color: rgba(255,255,255,0.4);
+		display: flex;
+		justify-content: space-around;
+	}
+	#footer .shopping_message{
+		padding:0rem 1.1rem 0rem 2.8rem;
+		background: #141d27;
+		display: flex;
+		align-items: center;
+	}
+	#footer .shopping_message .shopping-car-background{
+		display: inline-block;
+		width:1.76rem;
+		height:1.76rem;
+		padding:0.24rem;
+		margin-left:0.1rem;
+		border:none;
+		border-radius: 50%;
+		background-color: #141d27;
+		position: fixed;
+		bottom:0.32rem;
+		left:0.16rem;
+		text-align: center;
+		line-height: 1.76rem;
+	}
+	#footer .shopping_message .shopping-car-background .shopping-car-background-padding{
+		display: inline-block;
+		width:1.76rem;
+		height:1.76rem;
+		border:none;
+		border-radius: 50%;
+		background-color: #51565c;
+	}
+	#footer .shopping_message .shopping-car{
+		display: inline-block;
+		width:1.76rem;
+		height:1.76rem;
+		border:none;
+		border-radius: 50%;
+		background-color:  #51565c;
+		background: url(../src/resource/SVG/shopping_cart.svg) no-repeat;
+		background-size: cover;
+		opacity: 0.4;
+		position: fixed;
+		bottom:0.55rem;
+		left:0.5rem;
+		z-index: 1;
+		transform: scaleX(0.8) scaleY(0.8);
+	}
+	#footer .shopping_message .price{
+		display: inline-block;
+		font-weight: 350;
+		font-size:0.96rem;
+		height: 0.96rem;
+		line-height:0.96rem;
+		color:rgba(255,255,255,0.4);
+		margin:0.48rem 0.19rem 0.48rem 0rem;
+		padding:0rem 0.29rem 0rem 0.0rem;
+		border-right:0.04rem solid rgba(255,255,255,0.1);
+	}
+	#footer .shopping_message .shopping_detail{
+		display: inline-block;
+		font-weight: 350;
+		font-size: 0.64rem;
+		height: 0.96rem;
+		line-height:0.96rem;
+		color:rgba(255,255,255,0.4);
+	}
+	#footer .to_shopping_no{
+		padding:0.48rem 0.32rem 0rem 0.32rem;
+		line-height: 0.96rem;
+		color:rgba(255,255,255,0.4);
+		font-size: 0.64rem;
+		font-weight: 350;
+		width:3.5rem;
+		text-align: center;
+		background: #51565c;
+		display: none;
+	}
+	#footer .to_shopping{
+		padding:0.48rem 0.32rem 0rem 0.32rem;
+		line-height: 0.96rem;
+		color:rgba(255,255,255,0.8);
+		font-size: 0.7rem;
+		font-weight: 350;
+		letter-spacing: 0.1rem;
+		width:3.5rem;
+		text-align: center;
+		background: rgba(192, 0, 0, 0.89);
+	}
+</style>
+<body>
+	<div id="footer">
+		<div class="shopping_message">
+			<div class="shopping-car-background">
+				<div class="shopping-car-background-padding"></div>
+			</div>
+			<div class="shopping-car"></div>
+			<p class="price">￥2</p>
+			<p class="shopping_detail">另需要配送费￥4</p>
+		</div>
+		<div class="to_shopping_no">￥20元起送</div>
+		<div class="to_shopping">付款</div><!-- 
+		<div class="background_full_screen"></div> -->
+	</div>
+	<script type="text/javascript">
+		var oHTML = document.html||document.documentElement;
+		console.log(oHTML);
+		var oFontSize = oHTML.getBoundingClientRect().width/15;
+		oHTML.style.fontSize = oFontSize+"px";
+	</script>
+</body>
+</html>

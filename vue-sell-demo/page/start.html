@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width user-scalable=no" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../src/assets/cleardefault.css">
+	<script src="https://cdn.bootcss.com/vue/2.5.9/vue.common.js"></script>
+	<meta charset="UTF-8">
+	<title>start</title>
+</head>
+<style type="text/css">
+
+</style>
+<body>
+	<div id="start" >
+		<span v-for="itemClass in itemClasses" :class="itemClass"></span>
+	</div>
+	<script type="text/javascript">
+		var oHTML = document.html||document.documentElement;
+		console.log(oHTML);
+		var oFontSize = oHTML.getBoundingClientRect().width/15;
+		oHTML.style.fontSize = oFontSize+"px";
+
+		new Vue({
+
+		});
+	</script>
+</body>
+</html>

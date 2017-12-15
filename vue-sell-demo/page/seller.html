@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width user-scalable=no" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../src/assets/cleardefault.css">
+	<meta charset="UTF-8">
+	<title>seller</title>
+</head>
+<style type="text/css">
+	#seller{
+		width:100%;
+	}
+	.goods_nav{
+		float: left;
+		width:3.2rem;
+		background: #f3f5f7;
+	}
+	.goods_nav li{
+		height:2.16rem;
+		font-size: 0.48rem;
+		color:black;
+		font-weight: 200;
+		line-height: 2.16rem;
+		padding:0rem 0.56rem;
+	}
+	.goods_nav li.selected{
+		font-weight: normal;
+		background: white;
+	}
+	.foods{
+		display: block;
+		padding-left:3.2rem;
+	}
+	.foods .foods_title{
+		width: 100%;
+		height:1.04rem;
+		font-size: 0.48rem;
+		line-height: 1.04rem;
+		color:rgb(147,153,159);
+		border-left:0.16rem solid #d9dde1;
+		background: #f3f5f7;
+		padding-left:0.48rem;
+	}
+	.foods .foods_message{
+		padding:0.72rem;
+	}
+	.foods .foods_message .foods_pic{
+		float: left;
+		display: inline-block;
+		width:2rem;
+		height:2rem;
+		margin-right:0.4rem;
+	}
+	.foods .foods_message .foods_detail{
+		display: inline-block;
+		width:76%;
+		margin-top:0.08rem;
+	}
+	.foods .foods_message .foods_detail .foods_name{
+		width: 100%;
+		height: 0.4rem;
+		line-height:0.56rem;
+		font-size: 0.56rem;
+		color:rgb(7,17,27);
+		margin-bottom: 0.32rem;
+	}
+	.foods .foods_message .foods_detail .foods_type{
+		width:100%;
+		font-size: 0.4rem;
+		line-height: 0.4rem;
+		color:rgb(147,153,159);
+		margin-bottom: 0.32rem;
+	}
+	.foods .foods_message .foods_detail .foods_sellnum{
+		width:100%;
+		font-size: 0.4rem;
+		line-height: 0.4rem;
+		color:rgb(147,153,159);
+		margin-bottom: 0.32rem;
+	}
+	.foods .foods_message .foods_detail .foods_sellnum span{
+		margin-right:0.48rem;
+	}
+	.foods .foods_message .foods_detail .price_and_num{
+		width: 100%;
+		font-size: 0.4rem;
+		font-weight: normal;
+		line-height: 0.96rem;
+		color:rgb(147,153,159);
+		position: relative;
+	}
+	.foods .foods_message .foods_detail .price_and_num span{
+		font-size:0.56rem;
+		font-weight: 700;
+		line-height: 0.96rem;
+		color:rgb(240,20,20);
+	}
+	.foods .foods_message .foods_detail .price_and_num .line{
+		width:0.8rem;
+		height:0.08rem;
+		position: absolute;
+		top:0.48rem;
+		left:1.4rem;
+		background: rgb(147,153,159);
+	}
+	.foods .foods_message .foods_detail .price_and_num .control_goods{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: right
+	}
+	.foods .foods_message .foods_detail .price_and_num .control_goods .goods_number{
+		position: relative;
+		top:-0.14rem;
+		font-size: 0.4rem;
+		line-height: 0.96rem;
+		color:rgb(147,153,169);
+		font-weight: normal;
+	}
+	.foods .foods_message .foods_detail .price_and_num img{
+		display: inline-block;
+		width:1rem;
+		font-size: 0.96rem;
+		line-height: 0.96rem;
+	}
+	.foods .foods_message .foods_detail .price_and_num .increase{
+		padding-left:0.48rem;
+	}
+	.foods .foods_message .foods_detail .price_and_num .decrease{
+		padding-right:0.48rem;
+	}
+</style>
+<body>
+	<div id="seller">
+		<ul class="goods_nav">
+			<li>热销榜</li>
+			<li>热销榜</li>
+			<li class="selected">热销榜</li>
+			<li>热销榜</li>
+		</ul>
+		<div class="foods">
+			<p class="foods_title">单人特色套餐</p>
+			<div class="foods_message">
+				<img class="foods_pic" src="">
+				<div class="foods_detail">
+					<p class="foods_name">皮蛋瘦肉洲配包子套餐</p>
+					<p class="foods_type">咸粥</p>
+					<p class="foods_sellnum"><span>月售1132份</span>好评率100%</p>
+					<div class="price_and_num">
+						<div class="line"></div>
+						￥<span>24</span>￥28
+						<div class="control_goods">
+							<a href="#" class="decrease">
+								<img src="../src/resource/SVG/remove_circle_outline.svg">
+							</a>
+							<span class="goods_number">1</span>
+							<a href="#" class="increase">
+								<img src="../src/resource/SVG/add_circle.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var oHTML = document.html||document.documentElement;
+		console.log(oHTML);
+		var oFontSize = oHTML.getBoundingClientRect().width/15;
+		oHTML.style.fontSize = oFontSize+"px";
+	</script>
+</body>
+</html>
