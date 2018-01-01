@@ -17,8 +17,11 @@
 							<p class="foods_type" v-if="food.description">{{food.description}}</p>
 							<p class="foods_sellnum"><span v-if="food.sellCount">月售{{food.sellCount}}份</span v-if="food.rating">好评率{{food.rating}}%</p>
 							<div class="price_and_num" v-if="food.price">
+								
+								<span>￥</span>{{food.price}}
+								<span id="oldPrice" v-if="food.oldPrice">￥{{food.oldPrice}}
 								<div class="line" v-if="food.oldPrice"></div>
-								<span>￥</span>{{food.price}}<span v-if="food.oldPrice">￥{{food.oldPrice}}</span>
+								</span>
 
 								<car-control :food="food"></car-control>
 								
@@ -214,6 +217,8 @@
 		font-weight: 700;
 		line-height: 0.96rem;
 		color:rgb(240,20,20);
+	}
+	#oldPrice{
 		position: relative;
 	}
 	.foods .foods_message .foods_detail .price_and_num span{
@@ -222,12 +227,12 @@
 		line-height: 0.96rem;
 		color:rgb(147,153,159);
 	}
-	.foods .foods_message .foods_detail .price_and_num .line{
+	#oldPrice .line{
 		width:0.6rem;
 		height:0.04rem;
 		position: absolute;
-		top:0.48rem;
-		left:1.4rem;
+		top:0.26rem;
+		left:0.2rem;
 		background: rgb(147,153,159);
 	}
 </style>
